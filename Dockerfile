@@ -1,5 +1,4 @@
-FROM openjdk:8-jdk-alpine
-MAINTAINER Xetus OSS <xetusoss@xetus.com>
+FROM arm32v7/openjdk:8-jdk-alpine
 
 # Add the archiva user and group with a specific UID/GUI to ensure
 RUN addgroup --gid 1000 archiva &&\
