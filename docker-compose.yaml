@@ -1,19 +1,26 @@
 version: '3.7'
 services:
   archiva:
+    container_name: archiva
     image: edsonmoreirajr/archiva-docker-arm
     ports: 
      - 8082:8080
     environment:
-      SMTP_HOST: smtp
+      SMTP_HOST: mailhog
       SMTP_PORT: 1025
+    volumes: 
+      - archiva:/var/archiva  
     networks:
       - container
-  smtp:
-    image: mailhog/mailhog:latest
+  mailhog:
+    container_name: mailhog
+    image: cd2team/mailhog
     ports: 
       - 8025:8025
     networks:
       - container
+volumes:
+  archiva:
+  
 networks:
   container:
