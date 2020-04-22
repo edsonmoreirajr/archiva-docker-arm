@@ -1,4 +1,4 @@
-FROM arm32v7/openjdk:8-jdk-alpine
+FROM arm32v7/openjdk:8-jdk
 
 # Add the archiva user and group with a specific UID/GUI to ensure
 RUN addgroup --gid 1000 archiva &&\
