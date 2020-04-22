@@ -9,7 +9,7 @@ services:
       SMTP_HOST: mailhog
       SMTP_PORT: 1025
     volumes: 
-      - archiva:/var/archiva  
+      - archiva:archiva-data  
     networks:
       - container
   mailhog:
